@@ -8,7 +8,7 @@ Il est basé sur <http://getskeleton.com>, mis à jour et rendu accessible.
 
 Pour télécharger Skeleton :
 
-[Enregistrez le zip](https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip)
+[Enregistrez le zip](https://github.com/Agesse/Skeleton-A11y/raw/master/skeleton-a11y.zip)
 
 ### Que contiens Skeleton A11y ?
 
