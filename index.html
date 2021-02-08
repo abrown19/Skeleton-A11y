@@ -1,278 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
-    <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Skeleton: Responsive CSS Boilerplate</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Skeleton A11y</title>
 
-    <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/flexboxgrid-a11y.min.css">
+    <link rel="stylesheet" href="css/skeleton-a11y.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/highlight-a11y-dark.css">
 
-    <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="dist/css/normalize.css">
-    <link rel="stylesheet" href="dist/css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="stylesheet" href="css/github-prettify-theme.css">
-    <script src="js/site.js"></script>
-
-    <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="dist/images/favicon.png">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
-<body class="code-snippets-visible">
+<body id="top" tabindex="-1">
 
-    <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
-        <section class="header">
-            <h2 class="title">A dead simple, responsive boilerplate.</h2>
-            <a class="button button-primary"
-                href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip"
-                onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
-            <div class="value-props row">
-                <div class="four columns value-prop">
-                    <img class="value-img" src="images/feather.svg">
-                    Light as a feather at ~400 lines &amp; built with mobile in mind.
-                </div>
-                <div class="four columns value-prop">
-                    <img class="value-img" src="images/pens.svg">
-                    Styles designed to be a starting point, not a UI framework.
-                </div>
-                <div class="four columns value-prop">
-                    <img class="value-img" src="images/watch.svg">
-                    Quick to start with zero compiling or installing necessary.
-                </div>
-            </div>
-        </section>
+    <a href="#main" class="skiplink">Aller au contenu</a>
 
-        <div class="navbar-spacer"></div>
-        <nav class="navbar">
-            <div class="container">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#" data-popover="#codeNavPopover">Code</a>
-                        <div id="codeNavPopover" class="popover">
-                            <ul class="popover-list">
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#grid">Grid</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#typography">Typography</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#buttons">Buttons</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#forms">Forms</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#lists">Lists</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#code">Code</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#tables">Tables</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#queries">Queries</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="#utilities">Utilities</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
-                        <div id="moreNavPopover" class="popover">
-                            <ul class="popover-list">
-                                <li class="popover-item">
-                                    <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link"
-                                        href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link"
-                                        href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
-                                </li>
-                                <li class="popover-item">
-                                    <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a class="navbar-link" href="#grid">Grille</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#typography">Titres</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#buttons">Boutons</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#forms">Formulaires</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#lists">Listes</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#code">Code</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#tables">Tableaux</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#queries">@Media</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="#utilities">Autres</a>
+            </li>
+        </ul>
+    </nav>
 
-        <!-- Why use Skeleton -->
-        <div class="docs-section" id="intro">
-            <h6 class="docs-header">Is Skeleton for you?</h6>
-            <p>You should use Skeleton if you're embarking on a smaller project or just don't feel like you need all the
-                utility of larger frameworks. Skeleton only styles a handful of standard HTML elements and includes a
-                grid, but that's often more than enough to get started. In fact, <u>this site is built on Skeleton and
-                    has ~200 lines of custom CSS</u> (half of which is the docking navigation).</p>
-            <p>Love Skeleton and want to Tweet it, share it, or star it? Well, I appreciate that <3< /p>
-                    <a href="https://twitter.com/share" class="twitter-share-button"
-                        data-url="http://www.getskeleton.com"
-                        data-text="Skeleton - A dead simple, responsive boilerplate." data-via="dhg"
-                        data-related="dhg">Tweet</a>
-                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
-                    <!-- <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.getskeleton.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=151131931646052" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:140px" allowTransparency="true"></iframe> -->
-                    <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=watch&count=true"
-                        allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-                    <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=fork&count=true"
-                        allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    <main class="container" id="main">
+
+        <div class="header">
+            <h1>Skeleton A11y</h1>
+            <p class="subtitle">Un CSS simple et accessible à portée de main !</p>
+            <a class="button button-primary download-btn" href="./skeleton-a11y.zip">
+                Télécharger
+            </a>
         </div>
 
         <!-- Grid -->
         <div class="docs-section" id="grid">
-            <h6 class="docs-header">The grid</h6>
-            <p>The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device
-                at smaller sizes. The max width can be changed with one line of CSS and all columns will resize
-                accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the
-                browser. </p>
-            <div class="example-grid docs-example">
-                <div class="row">
-                    <div class="one column">One</div>
-                    <div class="eleven columns">Eleven</div>
-                </div>
-                <div class="row">
-                    <div class="two columns">Two</div>
-                    <div class="ten columns">Ten</div>
-                </div>
-                <div class="row">
-                    <div class="three columns">Three</div>
-                    <div class="nine columns">Nine</div>
-                </div>
-                <div class="row">
-                    <div class="four columns">Four</div>
-                    <div class="eight columns">Eight</div>
-                </div>
-                <div class="row">
-                    <div class="five columns">Five</div>
-                    <div class="seven columns">Seven</div>
-                </div>
-                <div class="row">
-                    <div class="six columns">Six</div>
-                    <div class="six columns">Six</div>
-                </div>
-                <div class="row">
-                    <div class="seven columns">Seven</div>
-                    <div class="five columns">Five</div>
-                </div>
-                <div class="row">
-                    <div class="eight columns">Eight</div>
-                    <div class="four  columns">Four</div>
-                </div>
-                <div class="row">
-                    <div class="nine columns">Nine</div>
-                    <div class="three columns">Three</div>
-                </div>
-                <div class="row">
-                    <div class="ten columns">Ten</div>
-                    <div class="two columns">Two</div>
-                </div>
-                <div class="row">
-                    <div class="eleven columns">Eleven</div>
-                    <div class="one column">One</div>
-                </div>
+            <h2 class="docs-header">Grille</h2>
+            <p>
+                La grille possède 12 colonnes et est basée sur <a href="http://flexboxgrid.com/#top">Flexbox Grid</a>.
+                <br>
+                Il y a 4 préfixes selon la taille de l'écran : sm, md, lg et xl. L'absence de préfixe permet
+                d'appliquer un format pour toutes les tailles.
+            </p>
+
+            <table class="full-width responsive-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            Toutes tailles<br>
+                            <small>&gt;0px</small>
+                        </th>
+                        <th>
+                            Petit<br>
+                            <small>≥576px</small>
+                        </th>
+                        <th>
+                            Medium<br>
+                            <small>≥768px</small>
+                        </th>
+                        <th>
+                            Large<br>
+                            <small>≥992px</small>
+                        </th>
+                        <th>
+                            Extra large<br>
+                            <small>≥1200px</small>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Largeur du conteneur</th>
+                        <td>Aucune (automatique)</td>
+                        <td>540px</td>
+                        <td>720px</td>
+                        <td>960px</td>
+                        <td>1140px</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Préfixe de la classe</th>
+                        <td><code>.col-</code></td>
+                        <td><code>.col-sm-</code></td>
+                        <td><code>.col-md-</code></td>
+                        <td><code>.col-lg-</code></td>
+                        <td><code>.col-xl-</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nombre de colonnes</th>
+                        <td colspan="5">12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Padding latéral</th>
+                        <td colspan="5">3rem (1.5rem à gauche et à droite de chaque colonne).
+                            <br>
+                            Utiliser
+                            <code>.no-padding</code> pour supprimer le padding.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Imbrication</th>
+                        <td colspan="5">Oui</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ordre des colonnes</th>
+                        <td colspan="5">Non, pour des raisons d'accessibilité l'ordre des colonnes est celui du HTML
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="small-screen-table-data">
+                <h3 class="docs-subheader">Largeur du conteneur</h3>
+                <dl>
+                    <dt>Toutes tailles &gt;0px</dt>
+                    <dd>Aucune (automatique)</dd>
+                    <dt>Petit ≥576px</dt>
+                    <dd>540px</dd>
+                    <dt>Medium ≥768px</dt>
+                    <dd>720px</dd>
+                    <dt>Large ≥992px</dt>
+                    <dd>960px</dd>
+                    <dt>Extra large ≥1200px</dt>
+                    <dd>1140px</dd>
+                </dl>
+
+                <h3 class="docs-subheader">Préfixe de la classe</h3>
+                <dl>
+                    <dt>Toutes tailles &gt;0px</dt>
+                    <dd>.col-</dd>
+                    <dt>Petit ≥576px</dt>
+                    <dd>.col-sm-</dd>
+                    <dt>Medium ≥768px</dt>
+                    <dd>.col-md-</dd>
+                    <dt>Large ≥992px</dt>
+                    <dd>.col-lg-</dd>
+                    <dt>Extra large ≥1200px</dt>
+                    <dd>.col-xl-</dd>
+                </dl>
+
+                <h3 class="docs-subheader">Autres informations</h3>
+                <dl>
+                    <dt>Nombre de colonnes</dt>
+                    <dd>12</dd>
+                    <dt>Padding latéral</dt>
+                    <dd>3rem (1.5rem à gauche et à droite de chaque colonne). Utiliser<code>.no-padding</code> pour
+                        supprimer le padding.</dd>
+                    <dt>Imbrication</dt>
+                    <dd>Oui</dd>
+                    <dt>Ordre des colonnes</dt>
+                    <dd>Non, pour des raisons d'accessibilité l'ordre des colonnes est celui du HTML</dd>
+                </dl>
             </div>
 
+            <div class="grid-sample">
 
-            <!-- CODE EXAMPLE ———————————————————————————————————————— -->
-            <pre class="code-example">
-<code class="code-example-body prettyprint"><!-- .container is main centered wrapper -->
-<div class="container">
-
-  <!-- columns should be the immediate child of a .row -->
-  <div class="row">
-    <div class="one column">One</div>
-    <div class="eleven columns">Eleven</div>
-  </div>
-
-  <!-- just use a number and class 'column' or 'columns' -->
-  <div class="row">
-    <div class="two columns">Two</div>
-    <div class="ten columns">Ten</div>
-  </div>
-
-  <!-- there are a few shorthand columns widths as well -->
-  <div class="row">
-    <div class="one-third column">1/3</div>
-    <div class="two-thirds column">2/3</div>
-  </div>
-  <div class="row">
-    <div class="one-half column">1/2</div>
-    <div class="one-half column">1/2</div>
-  </div>
-
-</div>
-
-<!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
-</code>
-</pre>
-            <!-- ————————————————————————————————————————————————————— -->
+                <div class="docs-subsection">
+                    <h3 class="docs-subheader">Taille automatique</h3>
+                    <p>En utilisant la classe <code>.col</code> sans préfixe, les colonnes sont réparties
+                        équitablement.
+                    </p>
+                    <div class="row margin-top">
+                        <div class="col block">
+                            <p>.col</p>
+                        </div>
+                        <div class="col block">
+                            <p>.col</p>
+                        </div>
+                        <div class="col block">
+                            <p>.col</p>
+                        </div>
+                        <div class="col block">
+                            <p>.col</p>
+                        </div>
+                    </div>
+                </div>
 
 
+                <div class="docs-subsection">
+                    <h3 class="docs-subheader">Taille fixe</h3>
+                    <p>
+                        Pour forcer la taille des colonnes il suffit d'utiliser <code>col-[préfixe]-[taille]</code>
+                        (exemple : <code>col-sm-6</code>).
+                        <br>
+                        La taille doit être comprise entre 1 et 12, et une absence de préfixe permettra un affichage
+                        identique quel que soit le média utilisé.
+                    </p>
+
+                    <div class="row margin-top">
+                        <div class="col-6 block">
+                            <p>.col-6</p>
+                        </div>
+                        <div class="col-6 block">
+                            <p>.col-6</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 block">
+                            <p>.col-4</p>
+                        </div>
+                        <div class="col-2 block">
+                            <p>.col-2</p>
+                        </div>
+                        <div class="col-4 block">
+                            <p>.col-4</p>
+                        </div>
+                        <div class="col-2 block">
+                            <p>.col-2</p>
+                        </div>
+                    </div>
+
+                    <p>Utilisez différents préfixes pour changer la disposition selon la taille de l'écran.</p>
+                    <div class="row margin-top">
+                        <div class="col-md-8 col-3 block">
+                            <p>.col-md-8.col-3</p>
+                        </div>
+                        <div class="col-md-4 col-9 block">
+                            <p>.col-md-4.col-9</p>
+                        </div>
+                    </div>
+
+                    <p>Il est possible de déplacer une colonne vers la droite en utilisant le préfixe
+                        <code>offset</code>.
+                    </p>
+                    <div class="row margin-top box">
+                        <div class="col-offset-3 col-9 block">
+                            <p>.col-offset-3.col-9</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subheader">Imbrication</h3>
+                    <p>Les lignes peuvent être imbriquées entre elles.</p>
+
+                    <div class="row multiple-row margin-top">
+                        <div class="col-5 box">
+                            <div class="row">
+                                <div class="col block">
+                                    <p>.col-6</p>
+                                </div>
+                                <div class="col block">
+                                    <p>.col-6</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 box">
+                            <div class="row">
+                                <div class="col-2 block">
+                                    <p>.col-2</p>
+                                </div>
+                                <div class="col-10 block">
+                                    <p>.col-10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subheader">Alignement et distribution</h3>
+                    <p>Il est possible de contrôler l'alignement d'une colonne dans sa ligne.</p>
+
+                    <div class="row row-start margin-top box">
+                        <div class="col-7 block">
+                            <p class="">.row.row-start</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-center box">
+                        <div class="col-7 block">
+                            <p>.row.row-center</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-end box">
+                        <div class="col-7 block">
+                            <p>.row.row-end</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-top box">
+                        <div class="col block">
+                            <p>.row.row-top</p>
+                        </div>
+                        <div class="col height-box block"></div>
+                    </div>
+
+                    <div class="row row-middle box">
+                        <div class="col block">
+                            <p>.row.row-middle</p>
+                        </div>
+                        <div class="col height-box block"></div>
+                    </div>
+
+                    <div class="row row-bottom box">
+                        <div class="col block">
+                            <p>.row.row-bottom</p>
+                        </div>
+                        <div class="col height-box block"></div>
+                    </div>
+
+                    <p>Distribution des colonnes dans la ligne :</p>
+                    <div class="row row-around margin-top box">
+                        <div class="col-3 block">
+                            <p>.row.row-around</p>
+                        </div>
+                        <div class="col-3 block"></div>
+                    </div>
+
+                    <div class="row row-between box">
+                        <div class="col-3 block">
+                            <p>.row.row-between</p>
+                        </div>
+                        <div class="col-3 block"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Typography -->
         <div class="docs-section" id="typography">
-            <h6 class="docs-header">Typography</h6>
-            <p>Type is all set with the <code>rems</code>, so font-sizes and spacial relationships can be responsively
-                sized based on a single <code>&lt;html&gt;</code> font-size property. Out of the box, Skeleton never
-                changes the <code>&lt;html&gt;</code> font-size, but it's there in case you need it for your project.
-                All measurements are still base 10 though so, an <code>&lt;h1&gt;</code> with
-                <code>5.0rem</code>font-size just means <code>50px</code>.</p>
-            <div class="docs-example">
-                <div class="row">
-                    <div class="six columns">
-                        <p><strong>The typography base</strong> is <a
-                                href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> served by Google, set at
-                            15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>,
-                            <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all obviously included.
+            <h2 class="docs-header">Titres</h2>
+            <p>Toutes les tailles sont basées sur l'unité <code>rem</code>.
+            </p>
+            <div>
+                <div class="row row-middle">
+                    <div class="col-12 col-lg no-padding">
+                        <p>La police de base utilisée est <a
+                                href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> hébergée par Google.
+                            Skeleton inclus les <a href="#">liens</a>,
+                            <span class="bold">la mise en gras</span>, <span class="italic">l'italique</span>, et
+                            <span class="underline">le soulignement</span>.
                         </p>
-                        <p><strong>Headings</strong> create a family of distinct sizes each with specific
-                            <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
+                        <p>Chaque <span class="bold">titre</span> possède une taille unique, ainsi que les propriétés
+                            <code>letter-spacing</code>, <code>line-height</code>, et <code>margin</code>.
+                        </p>
                     </div>
-                    <div class="six columns">
-                        <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 50rem</span></h1>
-                        <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 42rem</span></h2>
-                        <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 36rem</span></h3>
-                        <h4>Heading<span class="heading-font-size"> <code>&lt;h4&gt;</code> 30rem</span></h4>
-                        <h5>Heading<span class="heading-font-size"> <code>&lt;h5&gt;</code> 24rem</span></h5>
-                        <h6>Heading<span class="heading-font-size"> <code>&lt;h6&gt;</code> 15rem</span></h6>
+                    <div class="col-12 col-lg no-padding">
+                        <h1>Titre 1</h1>
+                        <h2>Titre 2</h2>
+                        <h3>Titre 3</h3>
+                        <h4>Titre 4</h4>
+                        <h5>Titre 5</h5>
+                        <h6>Titre 6</h6>
                     </div>
                 </div>
             </div>
@@ -280,65 +386,64 @@
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint"><!-- Standard Headings -->
-<h1>Heading</h1>
-<h2>Heading</h2>
-<h3>Heading</h3>
-<h4>Heading</h4>
-<h5>Heading</h5>
-<h6>Heading</h6>
+<code class="html">&lt;!-- Titres --&gt;
+&lt;h1&gt;Titre 1&lt;/h1&gt;
+&lt;h2&gt;Titre 2&lt;/h2&gt;
+&lt;h3&gt;Titre 3&lt;/h3&gt;
+&lt;h4&gt;Titre 4&lt;/h4&gt;
+&lt;h5&gt;Titre 5&lt;/h5&gt;
+&lt;h6&gt;Titre 6&lt;/h6&gt;
 
-<!-- Base type size -->
-<p>The base type is 15px over 1.6 line height (24px)</p>
+&lt;!-- Texte standard --&gt;
+&lt;p&gt;La police standard est à 16px pour une hauteur de ligne de 1.5 (24px)&lt;/p&gt;
 
-<!-- Other styled text tags -->
-<strong>Bolded</strong>
-<em>Italicized</em>
-<a>Colored</a>
-<u>Underlined</u>
+&lt;!-- Autres styles de texte --&gt;
+&lt;span class="bold"&gt;Gras&lt;/span&gt;
+&lt;span class="italic"&gt;Italique&lt;/span&gt;
+&lt;span class="underline"&gt;Souligné&lt;/span&gt;
 </code>
 </pre>
             <!-- ————————————————————————————————————————————————————— -->
-
-
         </div>
 
         <!-- Buttons -->
         <div class="docs-section" id="buttons">
-            <h6 class="docs-header">Buttons</h6>
-            <p>Buttons come in two basic flavors in Skeleton. The standard <code>&lt;button&gt;</code> element is plain,
-                whereas the <code>.button-primary</code> button is vibrant and prominent. Button styles are applied to a
-                number of appropriate form elements, but can also be arbitrarily attached to anchors with a
-                <code>.button</code> class.</p>
-            <div class="docs-example">
+            <h2 class="docs-header">Boutons</h2>
+            <p>Les boutons viennent dans deux styles. L'élément <code>&lt;button&gt;</code> standard est simple,
+                alors que le bouton <code>.button-primary</code> est coloré et mis en avant. Les styles de boutons sont
+                appliqués sur les éléments de base, mais n'importe quel élément peut être transformé avec la
+                classe
+                <code>.button</code>.
+            </p>
+            <div>
                 <div>
-                    <a class="button" href="#">Anchor button</a>
-                    <button>Button element</button>
-                    <input type="submit" value="submit input">
-                    <input type="button" value="button input">
+                    <a class="button" href="#">Lien en forme de bouton</a>
+                    <button>Elément button</button>
+                    <input type="submit" value="input type submit">
+                    <input type="button" value="input type button">
                 </div>
                 <div>
-                    <a class="button button-primary" href="#">Anchor button</a>
-                    <button class="button-primary">Button element</button>
-                    <input class="button-primary" type="submit" value="submit input">
-                    <input class="button-primary" type="button" value="button input">
+                    <a class="button button-primary" href="#">Lien en forme de bouton</a>
+                    <button class="button-primary">Elément button</button>
+                    <input class="button-primary" type="submit" value="input type submit">
+                    <input class="button-primary" type="button" value="input type button">
                 </div>
             </div>
 
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint"><!-- Standard buttons -->
-<a class="button" href="#">Anchor button</a>
-<button>Button element</button>
-<input type="submit" value="submit input">
-<input type="button" value="button input">
+<code class="html">&lt;!-- Boutons standards --&gt;
+&lt;a class="button" href="#"&gt;Lien en forme de bouton&lt;/a&gt;
+&lt;button&gt;Elément button&lt;/button&gt;
+&lt;input type="submit" value="input type submit"&gt;
+&lt;input type="button" value="input type button"&gt;
 
-<!-- Primary buttons -->
-<a class="button button-primary" href="#">Anchor button</a>
-<button class="button-primary">Button element</button>
-<input class="button-primary" type="submit" value="submit input">
-<input class="button-primary" type="button" value="button input">
+&lt;!-- Boutons accentués --&gt;
+&lt;a class="button button-primary" href="#"&gt;Lien en forme de bouton&lt;/a&gt;
+&lt;button class="button-primary"&gt;Elément button&lt;/button&gt;
+&lt;input class="button-primary" type="submit" value="input type submit"&gt;
+&lt;input class="button-primary" type="button" value="input type button"&gt;
 </code>
 </pre>
             <!-- ————————————————————————————————————————————————————— -->
@@ -348,103 +453,108 @@
 
         <!-- Forms -->
         <div class="docs-section" id="forms">
-            <h6 class="docs-header">Forms</h6>
-            <p>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons
-                are normalized for a common height cross-browser so inputs can be stacked or placed alongside each
-                other.</p>
-            <div class="docs-example docs-example-forms">
+            <h2 class="docs-header">Formulaires</h2>
+            <p>Tous les champs, liste de sélection et boutons sont normalisés pour avoir une hauteur commune, afin de
+                pouvoir les empiler ou les placer à côtés les uns des autres.</p>
+            <div class="docs-example-forms">
                 <form>
                     <div class="row">
-                        <div class="six columns">
-                            <label for="exampleEmailInput">Your email</label>
-                            <input class="u-full-width" type="email" placeholder="test@mailbox.com"
-                                id="exampleEmailInput">
+                        <div class="col no-padding">
+                            <label for="exampleEmailInput">Votre adresse email</label>
+                            <input class="full-width" type="email" placeholder="test@mail.com" id="exampleEmailInput">
                         </div>
-                        <div class="six columns">
-                            <label for="exampleRecipientInput">Reason for contacting</label>
-                            <select class="u-full-width" id="exampleRecipientInput">
+                        <div class="col no-padding" style="margin-left: 1.5rem;">
+                            <label for="exampleRecipientInput">Sujet de l'email</label>
+                            <select class="full-width" id="exampleRecipientInput">
                                 <option value="Option 1">Questions</option>
-                                <option value="Option 2">Admiration</option>
-                                <option value="Option 3">Can I get your number?</option>
+                                <option value="Option 2">Remarques</option>
+                                <option value="Option 3">Demande de remboursement</option>
                             </select>
                         </div>
                     </div>
+
                     <label for="exampleMessage">Message</label>
-                    <textarea class="u-full-width" placeholder="Hi Dave &hellip;" id="exampleMessage"></textarea>
+                    <textarea class="full-width" placeholder="Bonjour Skeleton, je souhaite ..."
+                        id="exampleMessage"></textarea>
+
                     <label class="example-send-yourself-copy">
                         <input type="checkbox">
-                        <span class="label-body">Send a copy to yourself</span>
+                        <span class="label-body">M'envoyer une copie</span>
                     </label>
-                    <input class="button-primary" type="submit" value="Submit">
+
+                    <input class="button-primary" type="submit" value="Envoyer">
                 </form>
             </div>
 
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint"><!-- The above form looks like this -->
-<form>
-  <div class="row">
-    <div class="six columns">
-      <label for="exampleEmailInput">Your email</label>
-      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-    </div>
-    <div class="six columns">
-      <label for="exampleRecipientInput">Reason for contacting</label>
-      <select class="u-full-width" id="exampleRecipientInput">
-        <option value="Option 1">Questions</option>
-        <option value="Option 2">Admiration</option>
-        <option value="Option 3">Can I get your number?</option>
-      </select>
-    </div>
-  </div>
-  <label for="exampleMessage">Message</label>
-  <textarea class="u-full-width" placeholder="Hi Dave &hellip;" id="exampleMessage"></textarea>
-  <label class="example-send-yourself-copy">
-    <input type="checkbox">
-    <span class="label-body">Send a copy to yourself</span>
-  </label>
-  <input class="button-primary" type="submit" value="Submit">
-</form>
+<code class="html">&lt;!-- Code du formulaire ci-dessus --&gt;
+&lt;form&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col no-padding"&gt;
+            &lt;label for="exampleEmailInput"&gt;Votre adresse email&lt;/label&gt;
+            &lt;input class="full-width" type="email" placeholder="test@mail.com" id="exampleEmailInput"&gt;
+        &lt;/div&gt;
+        &lt;div class="col no-padding" style="margin-left: 1.5rem;"&gt;
+            &lt;label for="exampleRecipientInput"&gt;Sujet de l'email&lt;/label&gt;
+            &lt;select class="full-width" id="exampleRecipientInput"&gt;
+                &lt;option value="Option 1"&gt;Questions&lt;/option&gt;
+                &lt;option value="Option 2"&gt;Remarques&lt;/option&gt;
+                &lt;option value="Option 3"&gt;Demande de remboursement&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+    &lt;label for="exampleMessage"&gt;Message&lt;/label&gt;
+    &lt;textarea class="full-width" placeholder="Bonjour Skeleton, je souhaite ..."
+        id="exampleMessage"&gt;&lt;/textarea&gt;
 
-<!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+    &lt;label class="example-send-yourself-copy"&gt;
+        &lt;input type="checkbox"&gt;
+        &lt;span class="label-body"&gt;M'envoyer une copie&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;input class="button-primary" type="submit" value="Envoyer"&gt;
+&lt;/form&gt;
+
+&lt;!-- Entourez toujours les cases à cocher et les boutons radio d'un label et 
+utilisez un &lt;span class="label-body"&gt; à l'intérieur --&gt;
+
+&lt;!-- Note : La classe .full-width est juste une classe raccourci pour width: 100% --&gt;
 </code>
 </pre>
             <!-- ————————————————————————————————————————————————————— -->
-
-
         </div>
 
         <!-- Lists -->
         <div class="docs-section" id="lists">
-            <h6 class="docs-header">Lists</h6>
-            <div class="row docs-example">
-                <div class="six columns">
+            <h2 class="docs-header">Listes</h2>
+            <div class="row">
+                <div class="col">
                     <ul>
-                        <li>Unordered lists have basic styles</li>
+                        <li>Les listes non ordonnées ont un style basique</li>
                         <li>
-                            They use the circle list style
+                            Elles utilisent un cercle pour la puce
                             <ul>
-                                <li>Nested lists styled to feel right</li>
-                                <li>Can nest either type of list into the other</li>
+                                <li>Vous pouvez imbriquer vos listes !</li>
+                                <li>N'importe quel type de liste peut être imbriqué</li>
                             </ul>
                         </li>
-                        <li>Just more list items mama san</li>
+                        <li>Un élément de liste en plus</li>
                     </ul>
                 </div>
-                <div class="six columns">
+                <div class="col">
                     <ol>
-                        <li>Ordered lists also have basic styles</li>
+                        <li>Les listes ordonnées ont aussi un style basique</li>
                         <li>
-                            They use the decimal list style
+                            Elles utilisent un chiffre décimal
                             <ul>
-                                <li>Ordered and unordered can be nested</li>
-                                <li>Can nest either type of list into the other</li>
+                                <li>Vous pouvez imbriquer vos listes !</li>
+                                <li>N'importe quel type de liste peut être imbriqué</li>
                             </ul>
                         </li>
-                        <li>Last list item just for the fun</li>
+                        <li>Dernier élément de liste</li>
                     </ol>
                 </div>
             </div>
@@ -452,66 +562,71 @@
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint"><ul>
-  <li>Item 1</li>
-  <li>
-    Item 2
-    <ul>
-      <li>Item 2.1</li>
-      <li>Item 2.2</li>
-    </ul>
-  </li>
-  <li>Item 3</li>
-</ul>
+<code class="html">&lt;ul&gt;
+  &lt;li&gt;Elément 1&lt;/li&gt;
+  &lt;li&gt;
+    Elément 2
+    &lt;ul&gt;
+      &lt;li&gt;Elément 2.1&lt;/li&gt;
+      &lt;li&gt;Elément 2.2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Elément 3&lt;/li&gt;
+&lt;/ul&gt;
 
-<!-- Easily substitute any <ul> or an <ol> to get number lists or sublists. Skeleton doesn't support lists nested deeper than 2 levels -->
+&lt;!-- Skeleton A11y ne supporte pas les listes de plus de 2 niveaux --&gt;
 </code>
 </pre>
             <!-- ————————————————————————————————————————————————————— -->
-
-
         </div>
 
         <!-- Code -->
         <div class="docs-section" id="code">
-            <h6 class="docs-header">Code</h6>
-            <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like
-                <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.
+            <h2 class="docs-header">Code</h2>
+            <p>La stylisation de code est basique. Entourez votre code d'une balise <code>&lt;code&gt;</code> et il sera
+                affiché comme
+                <code>ceci</code>. Pour des blocs de code, entourez l'élément <code>&lt;code&gt;</code> avec un élément
+                <code>&lt;pre&gt;</code>.
             </p>
-            <div class="docs-example">
-                <pre><code>.some-class {
+
+            <p>Pour utiliser une coloration syntaxique, la librairie <a href="https://highlightjs.org/">HighlightJS</a>
+                fait des
+                merveilles !</p>
+
+            <pre><code class="nohighlight">.une-classe {
   background-color: red;
 }</code></pre>
-            </div>
 
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint"><pre><code>.some-class {
+                <code class="html">&lt;pre&gt;
+    &lt;code&gt;
+.une-classe {
   background-color: red;
-}</code></pre>
-
-            <!-- Remember every whitespace and break will be preserved in a <pre>, including indentation in your code -->
-            </code>
-            </pre>
+}
+    &lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
             <!-- ————————————————————————————————————————————————————— -->
-
-
         </div>
+
+
 
         <!-- Tables -->
         <div class="docs-section" id="tables">
-            <h6 class="docs-header">Tables</h6>
-            <p>Be sure to use properly formed table markup with <code>&lt;thead&gt;</code> and
-                <code>&lt;tbody&gt;</code> when building a <code>table</code>.</p>
-            <div class="docs-example">
-                <table class="u-full-width">
+            <h2 class="docs-header">Tableaux</h2>
+            <p>Utilisez les éléments <code>&lt;thead&gt;</code> et
+                <code>&lt;tbody&gt;</code> quand vous fabriquez une <code>table</code>.
+            </p>
+            <div>
+                <table class="full-width">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Nom</th>
                             <th>Age</th>
-                            <th>Sex</th>
-                            <th>Location</th>
+                            <th>Sexe</th>
+                            <th>Ville</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -525,7 +640,7 @@
                             <td>Dwayne Johnson</td>
                             <td>42</td>
                             <td>Male</td>
-                            <td>Hayward</td>
+                            <td>Paris</td>
                         </tr>
                     </tbody>
                 </table>
@@ -534,30 +649,30 @@
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint"><table class="u-full-width">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Sex</th>
-      <th>Location</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Dave Gamache</td>
-      <td>26</td>
-      <td>Male</td>
-      <td>San Francisco</td>
-    </tr>
-    <tr>
-      <td>Dwayne Johnson</td>
-      <td>42</td>
-      <td>Male</td>
-      <td>Hayward</td>
-    </tr>
-  </tbody>
-</table>
+<code class="code-example-body prettyprint">&lt;table class="full-width"&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nom&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;Sexe&lt;/th&gt;
+        &lt;th&gt;Ville&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dave Gamache&lt;/td&gt;
+        &lt;td&gt;26&lt;/td&gt;
+        &lt;td&gt;Male&lt;/td&gt;
+        &lt;td&gt;San Francisco&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dwayne Johnson&lt;/td&gt;
+        &lt;td&gt;42&lt;/td&gt;
+        &lt;td&gt;Male&lt;/td&gt;
+        &lt;td&gt;Paris&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </code>
 </pre>
             <!-- ————————————————————————————————————————————————————— -->
@@ -567,147 +682,133 @@
 
         <!-- Queries -->
         <div class="docs-section" id="queries">
-            <h6 class="docs-header">Media queries</h6>
-            <p>Skeleton uses media queries to serve its scalable grid, but also has a list of queries for convenience of
-                styling your site across devices. The queries are mobile-first, meaning they target
-                <code>min-width</code>. Mobile-first queries are how Skeleton's grid is built and is the preferrable
-                method of organizing CSS. It means all styles outside of a query apply to all devices, then larger
-                devices are targeted for enhancement. This prevents small devices from having to parse tons of unused
-                CSS. The sizes for the queries are:</p>
-            <div class="docs-example row">
-                <div class="six columns">
-                    <ul>
-                        <li><strong>Desktop HD</strong>: 1200px</li>
-                        <li><strong>Desktop</strong>: 1000px</li>
-                        <li><strong>Tablet</strong>: 750px</li>
-                    </ul>
-                </div>
-                <div class="six columns">
-                    <ul>
-                        <li><strong>Phablet</strong>: 550px</li>
-                        <li><strong>Mobile</strong>: 400px</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="docs-header">@Media</h2>
+            <p>Skeleton A11y utilise les directives CSS @media pour adapter l'affichage sur les différents écrans.
+                Préférez configurer votre site pour mobile en premier (approche mobile first), puis inclure dans les
+                directives
+                @media les parties spécifiques aux plus grands terminaux.
+            </p>
+
+            <ul class="query-list">
+                <li><strong>Bureau HD</strong>: 1200px</li>
+                <li><strong>Bureau</strong>: 992px</li>
+                <li><strong>Tablette</strong>: 768px</li>
+                <li><strong>Phablette</strong>: 576px</li>
+                <li><strong>Mobile</strong>: 0px</li>
+            </ul>
 
 
             <!-- CODE EXAMPLE ———————————————————————————————————————— -->
             <pre class="code-example">
-<code class="code-example-body prettyprint">/* Mobile first queries */
+<code class="css">/* CSS Mobile first */
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet */
+/* Phablettes et + */
 @media (min-width: 550px) {}
 
-/* Larger than tablet */
+/* Tablettes et + */
 @media (min-width: 750px) {}
 
-/* Larger than desktop */
+/* Bureau et + */
 @media (min-width: 1000px) {}
 
-/* Larger than Desktop HD */
+/* Bureau HD et + */
 @media (min-width: 1200px) {}
-
-
 </code>
 </pre>
             <!-- ————————————————————————————————————————————————————— -->
-
-
         </div>
 
 
         <!-- Utilities and Misc. -->
         <div class="docs-section" id="utilities">
-            <h6 class="docs-header">Utilities</h6>
-            <p>Skeleton has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to
-                use a utility class than create a whole new class just to float an element.</p>
+            <h2 class="docs-header">Autres</h2>
+            <h3 class="docs-subheader">Couleurs</h3>
+            <p>Skeleton A11y utilise les variables globales CSS pour gérer les couleurs du thème. Les couleurs d'origine
+                sont accessibes, mais il est aussi très simple de modifier le thème à sa convenance.<br>
+                Pour cela, modifiez directement les couleurs (en particulier <code>--ske-main-color</code>) dans le
+                fichier <code>skeleton.css</code>.
+            </p>
+
+            <table class="full-width">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Utilisation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--ske-main-color</code></td>
+                        <td>Couleur principale du thème.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--ske-light-txt</code></td>
+                        <td>Couleur des textes sur fond foncé.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>--ske-dark-bg</code></td>
+                        <td>Couleur des fonds foncés.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--ske-dark-txt</code></td>
+                        <td>Couleur des textes sur fond clair.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--ske-light-bg</code></td>
+                        <td>Couleur des fonds clairs.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--ske-border-color</code></td>
+                        <td>Couleur des bordures.</td>
+                    </tr>
+                </tbody>
+            </table>
 
 
-            <!-- CODE EXAMPLE ———————————————————————————————————————— -->
-            <pre class="code-example">
-<code class="code-example-body prettyprint">/* Utility Classes */
+            <h3 class="docs-subheader">Utilitaires</h3>
+            <p>Skeleton A11y possède plusieurs classes qui servent à aider le design sans avoir à les redéfinir
+                vous-même.</p>
 
-/* Make element full width */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
-
-/* Make sure elements don't run outside containers (great for images in columns) */
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box; }
-
-/* Float either direction */
-.u-pull-right {
-  float: right; }
-.u-pull-left {
-  float: left; }
-
-/* Clear a float */
-.u-cf {
-  content: "";
-  display: table;
-  clear: both; }
-</code>
-</pre>
-            <!-- ————————————————————————————————————————————————————— -->
-
-
+            <table class="full-width">
+                <thead>
+                    <tr>
+                        <th>Classe</th>
+                        <th>Utilisation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.full-width</td>
+                        <td>Faire prendre toute la largeur du conteneur à un élément.</td>
+                    </tr>
+                    <tr>
+                        <td>.max-full-width</td>
+                        <td>Faire prendre au maximum toute la largeur du conteneur à un élément (utile pour les images).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>.margin-top</td>
+                        <td>Applique une marge supérieure de 1rem.</td>
+                    </tr>
+                    <tr>
+                        <td>.margin-bottom</td>
+                        <td>Applique une marge inférieure de 1rem.</td>
+                    </tr>
+                    <tr>
+                        <td>.no-padding</td>
+                        <td>Supprime les paddings sur une colonne.</td>
+                    </tr>
+                    <tr>
+                        <td>.sr-only</td>
+                        <td>Cache du texte pour qu'il ne soit lisible que pour les lecteurs d'écrans.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- Examples -->
-        <div class="docs-section examples" id="examples">
-            <h6 class="docs-header">Examples</h6>
-            <div class="row example">
-                <a class="example-screenshot-wrapper" target="_blank" href="examples/landing">
-                    <img class="example-screenshot" src="images/examples/landing.jpg">
-                </a>
-                <div class="one-half offset-by-one-half column">
-                    <h6 class="example-header">Demo Landing Page</h6>
-                    <p class="example-description">This template is an example of how easy it can be to create a landing
-                        page with just the Skeleton grid and a few custom styles. The entire demo is ~150 lines of CSS
-                        including comments (most of which is positioning the phones at the top).</p>
-                    <a class="button" href="examples/landing" target="_blank">Demo</a>
-                    <a class="button" href="https://github.com/dhg/Skeleton/tree/gh-pages/examples/landing"
-                        target="_blank">Source</a>
-                </div>
-            </div>
-            <div class="row example">
-                <div class="example-screenshot-wrapper">
-                    <div class="example-screenshot coming-soon"></div>
-                </div>
-                <div class="one-half offset-by-one-half column">
-                    <h6 class="example-header">More Coming Soon!</h6>
-                    <p class="example-description">More examples will be added to help anyone get started or more
-                        familiar with how Skeleton works. The goal is education. If you're more interested in real, live
-                        examples of Skeleton sites, I'll be creating a "Built on Skeleton" list soon!</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-33397759-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-
-    <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a class="button button-primary top-button" href=" #top">Retour en haut</a>
+    </main>
 </body>
 
 </html>
