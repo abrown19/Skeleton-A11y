@@ -2,6 +2,8 @@
 
 Skeleton A11y est un ensemble de fichiers CSS simples, permettant de créer un design pensé mobile first et accessible.
 
+Voir le projet en action : [page du projet](https://agesse.github.io/Skeleton-A11y/) !
+
 Il est basé sur <http://getskeleton.com>, mis à jour et rendu accessible.
 
 ## Commencer
