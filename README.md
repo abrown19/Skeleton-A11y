@@ -2,25 +2,19 @@
 
 Skeleton A11y est un ensemble de fichiers CSS simples, permettant de créer un design pensé mobile first et accessible.
 
-Voir le projet en action : [page du projet](https://agesse.github.io/Skeleton-A11y/) !
+Voir le projet en action et télécharger le CSS : [page du projet](https://agesse.github.io/Skeleton-A11y/) !
 
 Il est basé sur <http://getskeleton.com>, mis à jour et rendu accessible.
 
-## Commencer
-
-Pour télécharger Skeleton :
-
-[Enregistrez le zip](https://github.com/Agesse/Skeleton-A11y/raw/master/skeleton-a11y.zip)
-
 ### Que contiens Skeleton A11y ?
 
-Le téléchargement contient le CSS de Skeleton A11y, Normalize CSS qui permet de remettre à zéro les styles des navigateurs, et FlexboxGrid A11y qui permet d'utiliser une grille basée sur la propriété CSS `flex`.
+Le téléchargement contient le CSS concaténé de Skeleton A11y, Normalize CSS qui permet de remettre à zéro les styles des navigateurs, et FlexboxGrid A11y qui permet d'utiliser une grille basée sur la propriété CSS `flex`.
 
 ```
 Skeleton/
 ├── normalize.min.css
 └── flexbexgrid-a11y.min.css
-└── skeleton-a11y.css
+└── skeleton-a11y.min.css
 ```
 
 ### Pourquoi l'utiliser ?

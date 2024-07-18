@@ -7,7 +7,6 @@
 * 12/29/2014
 */
 
-
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Colors
@@ -26,7 +25,7 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Colors
@@ -36,37 +35,38 @@
 - Ratio contrast between --ske-main-color and --ske-light-txt must be 4.5
 */
 :root {
-    --ske-border-color: #cccccc;
+  --ske-border-color: #cccccc;
+  --ske-border-radius: 4px;
 
-    --ske-dark-txt: #222;
-    --ske-light-bg: #f1f1f1;
+  --ske-dark-txt: #404654;
+  --ske-light-bg: #f1f1f1;
 
-    --ske-light-txt: white;
-    --ske-dark-bg: #343a40;
+  --ske-light-txt: white;
+  --ske-dark-bg: #343a40;
 
-    --ske-main-color: #006064;
+  --ske-main-color: hsl(182, 100%, 20%);
+  --ske-main-color-darker: hsl(182, 100%, 15%);
 
-    --ske-alert-bg: #fff6f6;
-    --ske-alert-txt: #a00d10;
-    --ske-success-bg: #EFF7EC;
-    --ske-success-txt: #275C28;
-    --ske-warning-bg: #FDFBEE;
-    --ske-warning-txt: #654F29;
+  --ske-alert-bg: #fdf6fb;
+  --ske-alert-txt: #a0006b;
+  --ske-success-bg: #eff7ec;
+  --ske-success-txt: #275c28;
+  --ske-warning-bg: #fdfbee;
+  --ske-warning-txt: #654f29;
 }
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-    line-height: 1.5;
-    font-weight: 400;
-    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: var(--ske-dark-txt);
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  color: var(--ske-dark-txt);
 }
-
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -76,78 +76,63 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 300;
 }
 
 h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    letter-spacing: -.1rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
 }
 
 h2 {
-    font-size: 1.8rem;
-    line-height: 1.25;
-    letter-spacing: -.1rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
+  letter-spacing: -0.05rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-    letter-spacing: -.1rem;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  letter-spacing: -0.05rem;
 }
 
 h4 {
-    font-size: 1.2rem;
-    line-height: 1.35;
-    letter-spacing: -.08rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  letter-spacing: -0.05rem;
 }
 
 h5 {
-    font-size: 1rem;
-    line-height: 1.5;
-    letter-spacing: -.05rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
 }
 
 h6 {
-    font-size: .8rem;
-    line-height: 1.6;
-    letter-spacing: 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 
 p {
-    margin-top: 0;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.underline {
-    text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-    color: var(--ske-main-color);
+  color: var(--ske-main-color);
+  text-decoration: underline;
+  transition: text-decoration-color 0.2s ease;
 }
 
-a:hover {
-    color: var(--ske-dark-txt);
-    background-color: var(--ske-light-bg);
-}
-
+a:hover,
 a:focus {
-    color: var(--ske-dark-txt);
+  text-decoration-color: transparent;
 }
-
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -156,21 +141,22 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    display: inline-block;
-    padding: 0 30px;
-    color: var(--ske-main-color);
-    text-align: center;
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 38px;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid var(--ske-main-color);
-    cursor: pointer;
+  display: inline-block;
+  padding: 0 1.875rem;
+  color: var(--ske-main-color);
+  text-align: center;
+  font-size: 0.8125rem;
+  line-height: 2.8;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: var(--ske-border-radius);
+  border: 1px solid var(--ske-main-color);
+  cursor: pointer;
+
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .button:hover,
@@ -185,11 +171,10 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    color: var(--ske-dark-txt);
-    border-color: var(--ske-dark-txt);
-    background: white;
+  color: var(--ske-light-txt);
+  background-color: var(--ske-main-color);
+  border-color: var(--ske-main-color);
 }
-
 
 .button.button-primary,
 a.button.button-primary,
@@ -197,9 +182,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-    color: var(--ske-light-txt);
-    background-color: var(--ske-main-color);
-    border-color: var(--ske-main-color);
+  color: var(--ske-light-txt);
+  background-color: var(--ske-main-color);
+  border-color: var(--ske-main-color);
 }
 
 .button.button-primary:hover,
@@ -208,13 +193,14 @@ button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
 input[type="button"].button-primary:hover {
-    background-color: var(--ske-dark-txt);
-    border-color: var(--ske-dark-txt);
+  background-color: var(--ske-main-color-darker);
+  border-color: var(--ske-main-color-darker);
 }
-
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/***** Champs standards *****/
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -224,12 +210,33 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-    height: 38px;
-    padding: 6px 10px;
-    /* The 6px vertically centers text on FF, ignored by Webkit */
-    border: 1px solid var(--ske-border-color);
-    border-radius: 4px;
-    box-shadow: none;
+  height: 2.375rem;
+  padding: 0.375rem 0.625rem;
+  border: 1px solid var(--ske-border-color);
+  border-radius: var(--ske-border-radius);
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="url"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled,
+select:disabled,
+input[type="email"]:read-only,
+input[type="number"]:read-only,
+input[type="search"]:read-only,
+input[type="text"]:read-only,
+input[type="tel"]:read-only,
+input[type="url"]:read-only,
+input[type="password"]:read-only,
+textarea:read-only {
+  background-color: var(--ske-light-bg);
+  cursor: not-allowed;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -241,67 +248,90 @@ input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid,
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--ske-alert-txt);
 }
 
 textarea {
-    min-height: 65px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+  min-height: 4.75rem; /* 2 fois la hauteur d'input */
 }
 
+/***** Labels & legends *****/
 label,
 legend {
-    display: block;
-    margin-bottom: .5rem;
-    font-weight: 600;
+  font-weight: bold;
+  font-size: 0.875rem;
 }
 
-fieldset {
-    padding: 0;
-    border-width: 0;
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+legend {
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+/***** Radios & checkboxes *****/
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  margin-bottom: 0;
+  margin-left: 0.5rem;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    display: inline;
+  accent-color: var(--ske-main-color);
 }
 
-label>.label-body {
-    display: inline-block;
-    margin-left: .5rem;
-    font-weight: normal;
+/***** other *****/
+.form-descr {
+  font-weight: normal;
+  font-size: 0.875rem;
 }
 
+fieldset {
+  border: 1px solid var(--ske-border-color);
+  border-radius: var(--ske-border-radius);
+  padding: 0rem 1.8rem 1rem;
+}
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-    list-style: circle inside;
+  list-style: circle inside;
 }
 
 ol {
-    list-style: decimal inside;
+  list-style: decimal inside;
 }
 
 ol,
 ul {
-    padding-left: 0;
-    margin-top: 0;
+  padding-left: 0;
+  margin-top: 0;
 }
 
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%;
+  margin: 0.3rem 0 0.3rem 2.5rem;
 }
 
 li {
-    margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 dl {
@@ -310,7 +340,7 @@ dl {
 }
 dt {
   flex-basis: 20%;
-  padding: 2px 4px;
+  padding: 0.125rem 0.25rem;
   text-align: right;
   font-weight: bold;
 }
@@ -318,7 +348,7 @@ dd {
   flex-basis: 70%;
   flex-grow: 1;
   margin: 0;
-  padding: 2px 4px;
+  padding: 0.125rem 0.25rem;
 }
 
 /* Alerts
@@ -347,63 +377,56 @@ dd {
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
-    padding: .2rem .5rem;
-    margin: 0 .2rem;
-    font-size: 90%;
-    white-space: nowrap;
-    color: var(--ske-dark-txt);
-    background: var(--ske-light-bg);
-    border: 1px solid var(--ske-border-color);
-    border-radius: 4px;
+  padding: 0 0.5rem;
+  margin: 0 0.2rem;
+  font-size: 90%;
+  color: var(--ske-dark-txt);
+  background: var(--ske-light-bg);
+  border: 1px solid var(--ske-border-color);
+  border-radius: var(--ske-border-radius);
 }
 
-pre>code {
-    display: block;
-    padding: 1rem 1.5rem;
-    white-space: pre;
-    overflow: auto;
-    color: var(--ske-light-txt);
-    background: var(--ske-dark-bg);
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+  color: var(--ske-light-txt);
+  background: var(--ske-dark-bg);
 }
-
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid var(--ske-border-color);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--ske-border-color);
 }
 
 th:first-child,
 td:first-child {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 th:last-child,
 td:last-child {
-    padding-right: 0;
+  padding-right: 0;
 }
-
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
-.button {
-    margin-bottom: 1rem;
-}
-
-input,
-textarea,
-select,
-fieldset,
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.form-group,
 p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 pre,
@@ -414,53 +437,105 @@ table,
 ul,
 ol,
 form {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.row .col:first-of-type,
+.row .col-1:first-of-type,
+.row .col-10:first-of-type,
+.row .col-11:first-of-type,
+.row .col-12:first-of-type,
+.row .col-2:first-of-type,
+.row .col-3:first-of-type,
+.row .col-4:first-of-type,
+.row .col-5:first-of-type,
+.row .col-6:first-of-type,
+.row .col-7:first-of-type,
+.row .col-8:first-of-type,
+.row .col-9:first-of-type {
+  padding-left: 0;
+}
+
+.row .col:last-of-type,
+.row .col-1:last-of-type,
+.row .col-10:last-of-type,
+.row .col-11:last-of-type,
+.row .col-12:last-of-type,
+.row .col-2:last-of-type,
+.row .col-3:last-of-type,
+.row .col-4:last-of-type,
+.row .col-5:last-of-type,
+.row .col-6:last-of-type,
+.row .col-7:last-of-type,
+.row .col-8:last-of-type,
+.row .col-9:last-of-type {
+  padding-right: 0;
 }
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .max-full-width {
-    max-width: 100%;
-}
-
-.margin-top {
-    margin-top: 1rem;
-}
-
-.margin-bottom {
-    margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .no-padding {
-    padding: 0;
+  padding: 0;
 }
 
 .sr-only {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    -webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
-.hidden {
-    display: none;
+.m-b-0 {
+  margin-bottom: 0;
+}
+.m-b-1 {
+  margin-bottom: 1rem;
+}
+.m-t-0 {
+  margin-top: 0;
+}
+.m-t-1 {
+  margin-top: 1rem;
+}
+
+.text-error {
+  color: var(--ske-alert-txt);
+}
+.text-success {
+  color: var(--ske-success-txt);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
-    border-width: 0;
-    border-top: 1px solid var(--ske-border-color);
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  border-width: 0;
+  border-top: 1px solid var(--ske-border-color);
 }
