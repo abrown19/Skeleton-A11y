@@ -37,4 +37,4 @@ Toutes les parties de Skeleton A11y sont distribuées selon la license [MIT](htt
 
 ## Acknowledgement
 
-Le Skeleton d'origine a été créé par [Dave Gamache](https://twitter.com/dhg).
+Le Skeleton d'origine a été créé par [Dave Gamache](https://twitter.com/dhg). The A11y fork is created and maintained by [Shirley NOËL](https://github.com/Agesse).
