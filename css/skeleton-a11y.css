@@ -34,7 +34,7 @@
 }
 
 /* webapp specific code ID */
-.row, #main {
+.row {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
@@ -442,7 +442,11 @@ select {
   border: 1px solid var(--ske-border-color);
   border-radius: var(--ske-border-radius);
   font-size: 0.89rem;
-  width: 100%;
+  width: 33%;
+}
+
+textarea {
+  width:100%;
 }
 
 input[type="email"]:disabled,
@@ -497,7 +501,7 @@ textarea {
 label,
 legend {
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.89rem;
 }
 
 label {
@@ -587,7 +591,7 @@ dd {
   color: var(--ske-alert-txt);
 }
 
-.success {
+.success, .result-link {
   background: var(--ske-success-bg);
   padding: 1rem;
   border: 1px solid var(--ske-success-txt);
@@ -667,35 +671,35 @@ form {
   margin-bottom: 1.5rem;
 }
 
-.row .col:first-of-type,
-.row .col-1:first-of-type,
-.row .col-10:first-of-type,
-.row .col-11:first-of-type,
-.row .col-12:first-of-type,
-.row .col-2:first-of-type,
-.row .col-3:first-of-type,
-.row .col-4:first-of-type,
-.row .col-5:first-of-type,
-.row .col-6:first-of-type,
-.row .col-7:first-of-type,
-.row .col-8:first-of-type,
-.row .col-9:first-of-type {
+.row .column:first-of-type, .row .columns:first-of-type
+.row .one:first-of-type,
+.row .ten:first-of-type,
+.row .eleven:first-of-type,
+.row .twelve:first-of-type,
+.row .two:first-of-type,
+.row .three:first-of-type,
+.row .four:first-of-type,
+.row .five:first-of-type,
+.row .six:first-of-type,
+.row .seven:first-of-type,
+.row .eight:first-of-type,
+.row .nine:first-of-type {
   padding-left: 0;
 }
 
-.row .col:last-of-type,
-.row .col-1:last-of-type,
-.row .col-10:last-of-type,
-.row .col-11:last-of-type,
-.row .col-12:last-of-type,
-.row .col-2:last-of-type,
-.row .col-3:last-of-type,
-.row .col-4:last-of-type,
-.row .col-5:last-of-type,
-.row .col-6:last-of-type,
-.row .col-7:last-of-type,
-.row .col-8:last-of-type,
-.row .col-9:last-of-type {
+.row .column:last-of-type, .row .columns:last-of-type
+.row .one:last-of-type,
+.row .ten:last-of-type,
+.row .eleven:last-of-type,
+.row .twelve:last-of-type,
+.row .two:last-of-type,
+.row .three:last-of-type,
+.row .four:last-of-type,
+.row .five:last-of-type,
+.row .six:last-of-type,
+.row .seven:last-of-type,
+.row .eight:last-of-type,
+.row .nine:last-of-type {
   padding-right: 0;
 }
 
@@ -765,6 +769,6 @@ hr {
   text-decoration: underline;
 }
 
-form#extras-form p:first {
+form#extras-form p:first-child {
   margin-top: 5rem;
 }
