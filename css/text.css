@@ -1,0 +1,45 @@
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * www.bradford.ac.uk
+ *
+ * It is illegal to download or use them on other websites.
+ * 
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2018
+ */
+@font-face 	{
+    font-family:"Circular Std";
+    src:url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/lineto-circular-book.woff2") format("woff2"),url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/lineto-circular-book.woff") format("woff");
+    font-display:swap;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+}
+@font-face 	{
+    font-family:"Circular Std";
+    src:url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/lineto-circular-bold.woff2") format("woff2"),url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/lineto-circular-bold.woff") format("woff");
+    font-display:swap;
+    font-weight:700;
+    font-style:normal;
+    font-stretch:normal;
+}
+@font-face 	{
+    font-family:"Greed Narrow";
+    src:url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/GreedNarrow-Medium[1].woff2") format("woff2"),url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/GreedNarrow-Medium[1].woff") format("woff");
+    font-display:swap;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+}
+@font-face 	{
+    font-family:"Greed Narrow";
+    src:url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/GreedNarrow-SemiBold[1].woff2") format("woff2"),url("https://www.bradford.ac.uk/media-v8/t4-bank/assets/fonts/GreedNarrow-SemiBold[1].woff") format("woff");
+    font-display:swap;
+    font-weight:700;
+    font-style:normal;
+    font-stretch:normal;
+}
